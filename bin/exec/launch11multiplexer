@@ -1,0 +1,136 @@
+#!/bin/bash
+
+echo "11 Multiplexer"
+max=0
+#EVAG
+
+param="mutationprobability=0.0 terminationmaxevaluation=208000 statisticsample=4000 algorithm=EVAGseqGP churn=true  neighborhood=newscast topologycache=40 terminationnotimproved=false minimization=true crossover=geneura.org.operators.tree.KozaBiasTreeCrossover crossoverprobability=0.9 terminationhitvalue=true terminationhitvaluesleep=true terminationhitvaluesleep=true selectionparam=7 selection2=geneura.org.selection.ProporcionateSelection terminationmaxcycles=51  evaluation=geneura.samples.gp.multiplexer.Multiplexer"
+
+times=0
+while [ $times -le $max ]; do
+
+#Sin churn
+echo $times
+
+echo "Sin Churn"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4000 $param tracefile=trazasinchurn > 11multiplexer.pop4000sinchurn.$times
+
+echo "entrfin day 1"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4000 $param tracefile=traza1.entrfin15-2003-09-10 > 11multiplexer.pop4000entrfin1.$times
+
+echo "entrfin day 2"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4000 $param tracefile=traza2.entrfin15-2003-09-14 > 11multiplexer.pop4000entrfin2.$times
+
+echo "ucb day 1"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4000 $param tracefile=traza1.ucb-1994-02-28 > 11multiplexer.pop4000ucb1.$times
+
+echo "ucb day 2"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4000 $param tracefile=traza2.ucb-1994-03-03 > 11multiplexer.pop4000ucb2.$times
+
+echo "xwtr day 1"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4000 $param tracefile=traza1.xwtr\_bursts4c-2005-01-16> 11multiplexer.pop4000xwtr1.$times
+
+echo "wxtr day 2"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4000 $param tracefile=traza2.xwtr\_bursts4c-2005-01-05 > 11multiplexer.pop4000xwtr2.$times
+
+
+echo "entrfin day 1 10%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4400 $param tracefile=traza1.entrfin15-2003-09-10 > 11multiplexer.pop4400entrfin1.$times
+
+echo "entrfin day 2 10%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4400 $param tracefile=traza2.entrfin15-2003-09-14 > 11multiplexer.pop4400entrfin2.$times
+
+echo "ucb day 1 10%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4400 $param tracefile=traza1.ucb-1994-02-28 > 11multiplexer.pop4400ucb1.$times
+
+echo "ucb day 2 10%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4400 $param tracefile=traza2.ucb-1994-03-03 > 11multiplexer.pop4400ucb2.$times
+
+
+echo "xwtr day 1 10%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4400 $param tracefile=traza1.xwtr\_bursts4c-2005-01-16> 11multiplexer.pop4400xwtr1.$times
+
+echo "wxtr day 2 10%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4400 $param tracefile=traza2.xwtr\_bursts4c-2005-01-05 > 11multiplexer.pop4400xwtr2.$times
+
+echo "entrfin day 1 20%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4800 $param tracefile=traza1.entrfin15-2003-09-10 > 11multiplexer.pop4800entrfin1.$times
+
+echo "entrfin day 2 20%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4800 $param tracefile=traza2.entrfin15-2003-09-14 > 11multiplexer.pop4800entrfin2.$times
+
+echo "ucb day 1 20%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4800 $param tracefile=traza1.ucb-1994-02-28 > 11multiplexer.pop4800ucb1.$times
+
+echo "ucb day 2 20%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4800 $param tracefile=traza2.ucb-1994-03-03 > 11multiplexer.pop4800ucb2.$times
+
+
+echo "xwtr day 1 20%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4800 $param tracefile=traza1.xwtr\_bursts4c-2005-01-16> 11multiplexer.pop4800xwtr1.$times
+
+echo "wxtr day 2 20%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4800 $param tracefile=traza2.xwtr\_bursts4c-2005-01-05 > 11multiplexer.pop4800xwtr2.$times
+
+echo "entrfin day 1 30%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5200 $param tracefile=traza1.entrfin15-2003-09-10 > 11multiplexer.pop5200entrfin1.$times
+
+echo "entrfin day 2 30%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5200 $param tracefile=traza2.entrfin15-2003-09-14 > 11multiplexer.pop5200entrfin2.$times
+
+echo "ucb day 1 30%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5200 $param tracefile=traza1.ucb-1994-02-28 > 11multiplexer.pop5200ucb1.$times
+
+echo "ucb day 2 30%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5200 $param tracefile=traza2.ucb-1994-03-03 > 11multiplexer.pop5200ucb2.$times
+
+
+echo "xwtr day 1 30%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5200 $param tracefile=traza1.xwtr\_bursts4c-2005-01-16> 11multiplexer.pop5200xwtr1.$times
+
+echo "wxtr day 2 30%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5200 $param tracefile=traza2.xwtr\_bursts4c-2005-01-05 > 11multiplexer.pop5200xwtr2.$times
+
+echo "entrfin day 1 40%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5600 $param tracefile=traza1.entrfin15-2003-09-10 > 11multiplexer.pop5600entrfin1.$times
+
+echo "entrfin day 2 40%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5600 $param tracefile=traza2.entrfin15-2003-09-14 > 11multiplexer.pop5600entrfin2.$times
+
+echo "ucb day 1 40%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5600 $param tracefile=traza1.ucb-1994-02-28 > 11multiplexer.pop5600ucb1.$times
+
+echo "ucb day 2 40%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5600 $param tracefile=traza2.ucb-1994-03-03 > 11multiplexer.pop5600ucb2.$times
+
+
+echo "xwtr day 1 40%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5600 $param tracefile=traza1.xwtr\_bursts4c-2005-01-16> 11multiplexer.pop5600xwtr1.$times
+
+echo "wxtr day 2 40%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=5600 $param tracefile=traza2.xwtr\_bursts4c-2005-01-05 > 11multiplexer.pop5600xwtr2.$times
+
+
+
+echo "entrfin day 1 50%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=6000 $param tracefile=traza1.entrfin15-2003-09-10 > 11multiplexer.pop6000entrfin1.$times
+
+echo "entrfin day 2 50%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=6000 $param tracefile=traza2.entrfin15-2003-09-14 > 11multiplexer.pop6000entrfin2.$times
+
+echo "ucb day 1 50%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=6000 $param tracefile=traza1.ucb-1994-02-28 > 11multiplexer.pop6000ucb1.$times
+
+echo "ucb day 2 50%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=6000 $param tracefile=traza2.ucb-1994-03-03 > 11multiplexer.pop6000ucb2.$times
+
+echo "xwtr day 1 50%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=6000 $param tracefile=traza1.xwtr\_bursts4c-2005-01-16> 11multiplexer.pop6000xwtr1.$times
+
+echo "wxtr day 2 50%"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=6000 $param tracefile=traza2.xwtr\_bursts4c-2005-01-05 > 11multiplexer.pop6000xwtr2.$times
+
+
+times=$[ $times + 1 ]
+done
+

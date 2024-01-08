@@ -1,0 +1,3 @@
+#!/bin/bash
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.Bisection mutationprobability=0.0 evaluation=geneura.samples.onemax.Onemax  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=GGA terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true

@@ -1,0 +1,49 @@
+#!/bin/bash
+
+echo newscast
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=100 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_100
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=150 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_150
+
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=200 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_200
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=250 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_250
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=300 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_300
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=350 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_350
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=400 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_400
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=450 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_450
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=500 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_500
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=450 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_550
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=500 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_600
+
+echo wattsstrogatz
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=100 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=wattsstrogatz topologyrewiring=0.2 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_100
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=150 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_150
+
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=200 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_200
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=250 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_250
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=300 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_300
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=350 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_350
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=400 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_400
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=450 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_450
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=500 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_500
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=450 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_550
+
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen chromosomesize=36 populationsize=500 mutationprobability=0.0 evaluation=geneura.samples.traps.Trap4  terminationmaxevaluation=1000000 statisticsample=1000000 algorithm=EVAGseq neighborhood=newscast topologycache=20 terminationnotimproved=true minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationhitvalue=true >> trap4_newscast_pop_600

@@ -1,0 +1,63 @@
+#!/bin/bash
+
+echo "3 Trap"
+max=0
+#EVAG
+
+
+
+param="chromosomesize=30 populationsize=3000 mutationprobability=0.034 evaluation=geneura.samples.traps.Trap3  terminationmaxevaluation=200000 statisticsample=3000 algorithm=EVAGseqChurn neighborhood=newscast topologycache=40 terminationnotimproved=false minimization=false crossover=geneura.org.operators.binary.UniformCrossover churn=true 
+terminationhitvaluesleep=true terminationhitvalue=true terminationmaxcycles=30"
+
+times=0
+while [ $times -le $max ]; do
+
+#Sin churn
+echo $times
+
+echo "entrfin day 1"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=trazasinchurn > 3trap.pop3000sinchurn.$times
+
+
+echo "entrfin day 1"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=entrfin1 > 3trap.pop3000entrfin1retorno.$times
+
+echo "entrfin day 2"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=entrfin2 > 3trap.pop3000entrfin2retorno.$times
+
+echo "ucb day 1"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=ucb1 > 3trap.pop3000ucb1retorno.$times
+
+echo "ucb day 2"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=ucb2 > 3trap.pop3000ucb2retorno.$times
+
+echo "xwtr day 1"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=xwtr1> 3trap.pop3000xwtr1retorno.$times
+
+echo "wxtr day 2"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=xwtr2 > 11multiplexer.pop4000xwtr2retorno.$times
+
+
+
+
+echo "Degradacion entrfin day 1"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=entrfin-degra-1 > 3trap.pop3000entrfin1.$times
+
+echo "Degradacion entrfin day 2"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=entrfin-degra-2 > 3trap.pop3000entrfin2.$times
+
+echo "Degradacion ucb day 1"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=ucb-degra-1 > 3trap.pop3000ucb1.$times
+
+echo "Degradacion ucb day 2"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=ucb-degra-2 > 3trap.pop3000ucb2.$times
+
+echo "Degradacion xwtr day 1"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=xwtr-degra-1> 3trap.pop3000xwtr1.$times
+
+echo "Degradacion wxtr day 2"
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $param tracefile=xwtr-degra-2 > 11multiplexer.pop4000xwtr2.$times
+
+times=$[ $times + 1 ]
+done
+

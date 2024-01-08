@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "11 Multiplexer"
+max=99
+#EVAG
+
+param="mutationprobability=0.0 terminationmaxevaluation=204000 statisticsample=4000 algorithm=GGAGP churn=true  terminationnotimproved=false minimization=true crossover=geneura.org.operators.tree.KozaBiasTreeCrossover crossoverprobability=0.9 terminationhitvalue=true terminationhitvaluesleep=true terminationhitvaluesleep=false selectionparam=7 selection2=geneura.org.selection.ProporcionateSelection terminationmaxcycles=51  evaluation=geneura.samples.gp.multiplexer.Multiplexer"
+
+times=30
+while [ $times -le $max ]; do
+
+#Sin churn
+echo $times
+
+echo "Sin Churn"
+time java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen populationsize=4000 $param tracefile=trazasinchurn > gga11multiplexer.pop4000sinchurn.$times
+
+
+
+times=$[ $times + 1 ]
+done
+

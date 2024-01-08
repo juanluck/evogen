@@ -1,0 +1,48 @@
+#!/bin/bash
+
+maxexp=50
+exp=1
+
+fixedparam=" terminationmaxevaluation=300000 statisticsample=300000  terminationhitvalue=true terminationhitvaluesleep=false  minimization=false crossover=geneura.org.operators.binary.UniformCrossover terminationnotimproved=false churn=false  chromosomesize=100 entropy=false evaluation=geneura.samples.onemax.Onemax algorithm=GGA"
+
+
+
+
+
+
+
+while [ $exp -le $maxexp ]; do
+
+
+
+echo GGA $exp
+
+echo gR 0
+#java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $fixedparam mutationprobability=0.0 populationsize=600 >> ggagR0
+
+echo gR 0.1
+#java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $fixedparam mutationprobability=0.0056 populationsize=2808 >> ggagR01
+ 
+echo gR 0.3
+#java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $fixedparam mutationprobability=0.017 populationsize=2184 >> ggagR03
+
+echo gR 0.5
+#java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $fixedparam mutationprobability=0.02 populationsize=2240 >> ggagR05
+
+echo gR 0.7
+#java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $fixedparam mutationprobability=0.039 populationsize=936 >> ggagR07
+
+echo gR 0.9
+#java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $fixedparam mutationprobability=0.034 populationsize=448 >> ggagR09
+
+echo gR 0.99
+java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $fixedparam mutationprobability=0.0364 populationsize=10 >> ggagR099
+
+echo gR 0.999
+#java -Xmx1024M -cp "$CLASSPATH:../lib/*" geneura.org.EvoGen $fixedparam mutationprobability=0.05 populationsize=5 >> ggagR0999
+
+
+
+	exp=$[ $exp + 1 ]
+done
+
